@@ -1,2 +1,4 @@
 rootProject.name = 'TMSHomeTask'
+include 'lesson1'
+include 'lesson1'
 
