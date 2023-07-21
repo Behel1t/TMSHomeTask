@@ -1,6 +1,8 @@
 // 1.Условные операторы:Программа для вывода названия поры года по номеру месяца с использованием оператора switch-case.
+package org.example;
 import java.util.Scanner;
-public class switchCase {
+
+public class SwitchCase {
     public static void main(String[] args) {
         System.out.println("Введите номер месяца");
         Scanner month=new Scanner(System.in);

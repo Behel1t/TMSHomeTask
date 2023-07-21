@@ -1,7 +1,9 @@
 // 4.Условные операторы:Программа для вывода условий температуры на улице.
+package org.example;
+
 import java.util.Scanner;
 
-public class temperatureOutside {
+public class TemperatureOutside {
     public static void main(String[] args) {
         System.out.println("Какая температура на улице?");
         Scanner number=new Scanner(System.in);
