@@ -6,51 +6,56 @@
 сообщите, что их средние арифметические равны).
 */
 package org.example;
-import java.util.Arrays;
 
-    public class HomeTaskThird {
+public class HomeTaskThird {
         public static void main(String[] args) {
-            int[] array1 = new int[5];
-            int[] array2 = new int[5];
+            //Создайте 2 массивa
+            int[] m1 = new int[5];
+            int[] m2 = new int[5];
 
-            for(int i = 0; i < 5; ++i) {
-                array1[i] = (int)(Math.random() * 6.0);
-                array2[i] = (int)(Math.random() * 6.0);
+            for (int i = 0; i < m1.length ; i++) {
+                m1[i] = (int)(Math.random()*6);
             }
 
-            System.out.println(Arrays.toString(array1));
-            System.out.println(Arrays.toString(array2));
-            double mid1 = 0.0;
-            double mid2 = 0.0;
-            double sum = 0.0;
-            int[] var9 = array1;
-            int var10 = array1.length;
-
-            int var11;
-            int i;
-            for(var11 = 0; var11 < var10; ++var11) {
-                i = var9[var11];
-                sum += (double)i;
+            for (int i = 0; i < m2.length ; i++) {
+                m2[i] = (int)(Math.random()*6);
             }
 
-            mid1 = sum / (double)array1.length;
-            sum = 0.0;
-            var9 = array2;
-            var10 = array2.length;
 
-            for(var11 = 0; var11 < var10; ++var11) {
-                i = var9[var11];
-                sum += (double)i;
+            for (int i = 0; i < m1.length; i++) {
+                System.out.print(m1[i]+" ");
             }
 
-            mid2 = sum / (double)array2.length;
-            if (mid1 > mid2) {
-                System.out.println("Среднее арифметическое первого массива (" + mid1 + ") > среднего арифметического второго массива (" + mid2 + ")");
-            } else if (mid1 < mid2) {
-                System.out.println("Среднее арифметическое первого массива (" + mid1 + ") <  среднего арифметического второго массива (" + mid2 + ")");
-            } else {
-                System.out.println("Средние арифметические массивов равны (" + mid1 + ")");
+            System.out.println();
+
+            for (int i = 0; i < m2.length; i++) {
+                System.out.print(m2[i]+" ");
+            }
+            System.out.println();
+            
+            int a = 0;
+            int b = 0;
+
+            for (int i = 0; i < m1.length; i++) {
+                a += m1[i];
+            }
+            System.out.println(a);
+
+            for (int i = 0; i < m2.length; i++) {
+                b += m2[i];
+            }
+            System.out.println(b);
+
+            if(a > b) {
+                System.out.println("Первый массив больше");
+            }
+            else if (a == b) {
+                System.out.println("Сумма элементов обоих массивов равна");
+            }
+            else {
+                System.out.println("Второй массив больше");
             }
 
         }
-    }
+}
+

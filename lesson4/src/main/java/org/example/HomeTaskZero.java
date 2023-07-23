@@ -7,24 +7,23 @@ import java.util.Scanner;
 
 public class HomeTaskZero {
     public static void main(String[] args) {
-        System.out.println("Задайте число");
-        Scanner number = new Scanner(System.in);
-        int value = number.nextInt();
-        int[] array = new int[]{1, 2, 3, 4, 5};
-        boolean flag = false;
-
-        for(int i = 0; i < array.length; ++i) {
-            if (array[i] == value) {
-                flag = true;
+        int[] array = {1, 3, 5, 7, 9};
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите число для поиска: ");
+        int searchNumber = scanner.nextInt();
+        boolean isFound = false;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == searchNumber) {
+                isFound = true;
+                break;
             }
         }
-
-        if (flag) {
-            System.out.println("Число в массиве");
+        if (isFound) {
+            System.out.println("Число " + searchNumber + " найдено в массиве.");
         } else {
-            System.out.println("Число не в массиве");
+            System.out.println("Число " + searchNumber + " не найдено в массиве.");
         }
-
     }
-
 }
+
+

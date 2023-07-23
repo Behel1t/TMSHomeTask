@@ -7,47 +7,32 @@
  */
 package org.example;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class HomeTaskSecond {
     public static void main(String[] args) {
-        System.out.println("Задайте размер массива");
-        Scanner scan = new Scanner(System.in);
-        int numb = scan.nextInt();
-        int[] array = new int[numb];
-
-        for(int i = 0; i < array.length; ++i) {
-            array[i] = (int)(Math.random() * 10.0);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите размер массива: ");
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 100);
         }
-
-        System.out.println(Arrays.toString(array));
-        double max = (double)array[0];
-        double min = (double)array[0];
-        double mid = 0.0;
-
-        for(int i = 0; i < array.length; ++i) {
-            if (max < (double)array[i]) {
-                max = (double)array[i];
+        int max = array[0];
+        int min = array[0];
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
             }
-
-            if (min > (double)array[i]) {
-                min = (double)array[i];
+            if (array[i] < min) {
+                min = array[i];
             }
-
-            if (array.length > 0) {
-                double sum = 0.0;
-
-                for(int j = 0; j < array.length; ++j) {
-                    sum += (double)array[j];
-                }
-
-                mid = sum / (double)array.length;
-            }
+            sum += array[i];
         }
-
-        System.out.println("max = " + max);
-        System.out.println("min = " + min);
-        System.out.println("mid = " + mid);
+        double average = (double) sum / array.length;
+        System.out.println("Максимальное значение: " + max);
+        System.out.println("Минимальное значение: " + min);
+        System.out.println("Среднее значение: " + average);
     }
 }

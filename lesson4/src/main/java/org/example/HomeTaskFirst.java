@@ -11,56 +11,39 @@ import java.util.Scanner;
 
 public class HomeTaskFirst {
         public static void main(String[] args) {
-            int[] array1 = new int[5];
-
-            for(int i = 0; i < 5; ++i) {
-                array1[i] = (int)(Math.random() * 10.0);
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Введите размер массива: ");
+            int size = scanner.nextInt();
+            int[] array = new int[size];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = (int) (Math.random() * 10);
             }
-
-            System.out.println(Arrays.toString(array1));
-            System.out.println("Введите число");
-            Scanner sc = new Scanner(System.in);
-            int num = sc.nextInt();
-            boolean numberExists = false;
-
-            int newSize;
-            for(newSize = 0; newSize < array1.length; ++newSize) {
-                if (array1[newSize] == num) {
-                    numberExists = true;
-                    break;
+            System.out.println(Arrays.toString(array));
+            System.out.print("Введите число для удаления: ");
+            int num = scanner.nextInt();
+            boolean found = false;
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] == num) {
+                    found = true;
+                    for (int j = i; j < array.length - 1; j++) {
+                        array[j] = array[j + 1];
+                    }
+                    size--;
+                    i--;
                 }
             }
-
-            if (numberExists) {
-                newSize = array1.length;
-
-                for(int i = 0; i < array1.length; ++i) {
-                    if (array1[i] == num) {
-                        --newSize;
-                    }
+            if (!found) {
+                System.out.println("Число не найдено в массиве");
+            } else {
+                int[] newArray = new int[size];
+                for (int i = 0; i < size; i++) {
+                    newArray[i] = array[i];
                 }
-
-                int[] newArray = new int[newSize];
-                int newIndex = 0;
-
-                int i;
-                for(i = 0; i < array1.length; ++i) {
-                    if (array1[i] != num) {
-                        newArray[newIndex] = array1[i];
-                        ++newIndex;
-                    }
+                array = newArray;
+                System.out.print("Новый массив: ");
+                for (int i : array) {
+                    System.out.print(i + " ");
                 }
-
-                System.out.println("Новый массив без указанного числа:");
-
-                for(i = 0; i < newSize; ++i) {
-                }
-
-                System.out.print(Arrays.toString(newArray));
-                } else {
-                System.out.println("Указанное число не найдено в массиве.");
-                }
-
             }
         }
-
+}
