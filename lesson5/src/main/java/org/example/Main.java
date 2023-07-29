@@ -24,5 +24,6 @@ public class Main {
         card2.getInfo();
         card3.getInfo();
 
+
     }
 }
