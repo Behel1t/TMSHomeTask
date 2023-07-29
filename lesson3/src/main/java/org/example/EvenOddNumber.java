@@ -1,7 +1,8 @@
 // 3.Условные операторы: Программа для вывода четных и нечетных значений.
+package org.example;
 import java.util.Scanner;
 
-public class evenOddNumber {
+public class EvenOddNumber {
     public static void main(String[] args) {
         System.out.println("Введите число");
         Scanner number = new Scanner(System.in);
