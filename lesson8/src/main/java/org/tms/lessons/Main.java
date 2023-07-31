@@ -20,6 +20,7 @@ public class Main {
             System.out.println("- " + employee.getFullName() + ", должность: " + employee.getPosition());
         }
 
+
         Director director2 = new Director("Mike", "Brown", 8);
         director1.addSubordinate(director2);
         director2.addSubordinate(worker3);
@@ -35,7 +36,7 @@ public class Main {
             }
         }
         System.out.println("Поиск сотрудника по имени:");
-        System.out.println(findEmployee(director1, "Bob"));
+        System.out.println(findEmployee(director2, "Mike Brown"));
     }
 
     public static boolean findEmployee(Employee employee, String name) {
@@ -43,9 +44,8 @@ public class Main {
             return true;
         } else if (employee instanceof Director) {
             for (Employee subordinate : ((Director) employee).getSubordinates()) {
-                if (findEmployee(subordinate, name)) {
-                    return true;
-                }
+                return true;
+
             }
         }
         return false;

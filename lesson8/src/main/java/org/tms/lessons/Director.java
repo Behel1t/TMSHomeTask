@@ -20,7 +20,7 @@ import java.util.List;
 
         public void addSubordinate(Employee employee) {
             subordinates.add(employee);
-            employee.setPosition(Position.WORKER);
+
         }
 
         public List<Employee> getSubordinates() {
