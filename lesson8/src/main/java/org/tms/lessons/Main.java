@@ -20,7 +20,6 @@ public class Main {
             System.out.println("- " + employee.getFullName() + ", должность: " + employee.getPosition());
         }
 
-
         Director director2 = new Director("Mike", "Brown", 8);
         director1.addSubordinate(director2);
         director2.addSubordinate(worker3);

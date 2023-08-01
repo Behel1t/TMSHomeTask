@@ -2,7 +2,6 @@ package org.tms.lessons;
 import java.util.ArrayList;
 import java.util.List;
 
-
     public class Director extends Employee {
         private List<Employee> subordinates;
 
