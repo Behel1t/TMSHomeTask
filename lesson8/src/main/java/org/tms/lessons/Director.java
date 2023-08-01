@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
     public class  Director extends Employee {
-        private final List<Employee> subordinates;
+        private  List<Employee> subordinates;
 
         public Director(String firstName, String lastName, int experience) {
             super(firstName, lastName, experience, Position.DIRECTOR);
@@ -18,7 +18,7 @@ import java.util.List;
         }
 
         public void addSubordinate(Employee employee) {
-            subordinates.add(employee);
+            subordinates.add(employee) ;
 
         }
 

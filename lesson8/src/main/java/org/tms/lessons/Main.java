@@ -34,7 +34,7 @@ public class Main {
                 }
             }
         }
-        System.out.println("Поиск сотрудника по имени:");
+        System.out.println("Поиск сотрудника  по имени:");
         System.out.println(findEmployee(director2, "Mike Brown"));
     }
 
