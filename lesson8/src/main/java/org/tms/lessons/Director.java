@@ -2,7 +2,7 @@ package org.tms.lessons;
 import java.util.ArrayList;
 import java.util.List;
 
-    public class Director extends Employee {
+    public class  Director extends Employee {
         private List<Employee> subordinates;
 
         public Director(String firstName, String lastName, int experience) {
