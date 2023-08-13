@@ -57,5 +57,6 @@ public class Car {
                 ", weight=" + weight +
                 ", speed=" + speed +
                 '}';
+
     }
 }

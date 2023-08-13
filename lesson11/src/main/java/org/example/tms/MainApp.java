@@ -9,12 +9,6 @@ public class MainApp {
         planeMyCollection.add(new Plane("white",46700,2334));
         System.out.println(carMyCollection);
         System.out.println(planeMyCollection);
-
-
-
-
-
-
-
     }
 }
+
