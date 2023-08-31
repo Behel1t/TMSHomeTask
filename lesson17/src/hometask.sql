@@ -1,9 +1,9 @@
 create table if not exists person(
-                                     id int primary key,
-                                     name_person varchar(50),
-    gender varchar(10),
-    person_birth date
-    );
+                                    id int primary key,
+                                    name_person varchar(50),
+                                    gender varchar(10),
+                                    person_birth date
+                                    );
 insert into person(id,name_person,gender,person_birth) values (1,'Daniel','man','1983-10-24'),
                                                               (2,'Walter','man','1983-09-10'),
                                                               (3,'Dana','women','1949-03-15'),
@@ -15,13 +15,11 @@ insert into person(id,name_person,gender,person_birth) values (1,'Daniel','man',
                                                               (9,'Harry','men','1999-05-07'),
                                                               (10,'Alex','men','1995-07-31');
 create table if not exists hobby (
-                                     id int primary key,
-                                     name varchar(50),
-    type_id int,
-    foreign key (type_id) references person(id)
-
-
-    );
+                                    id int primary key,
+                                    name varchar(50),
+                                    type_id int,
+                                    foreign key (type_id) references person(id)
+);
 insert into hobby(id, name, type_id) values
                                          (1, 'football', 1),
                                          (2, 'reading', 2),
@@ -37,16 +35,16 @@ insert into hobby(id, name, type_id) values
 create table if not exists hobby_type(
                                          id int primary key,
                                          name varchar(50)
-    );
+);
 
 insert into  hobby_type(id, name) values (1,'active'),
                                          (2,'passive');
 create table if not exists person_hobby(
-                                           person_id int,
-                                           hobby_id int,
-                                           FOREIGN KEY (person_id) REFERENCES person(id),
-    FOREIGN KEY (hobby_id) REFERENCES hobby(id)
-    );
+                                        person_id int,
+                                        hobby_id int,
+                                        FOREIGN KEY (person_id) REFERENCES person(id),
+                                        FOREIGN KEY (hobby_id) REFERENCES hobby(id)
+);
 insert into person_hobby(person_id, hobby_id) values (1, 1),
                                                      (1, 3),
                                                      (1, 5),
