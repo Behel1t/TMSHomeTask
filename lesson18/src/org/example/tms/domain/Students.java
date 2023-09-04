@@ -6,6 +6,19 @@ public class Students {
     private String lastName;
     private int age;
     private String team;
+    private String city;
+
+    @Override
+    public String toString() {
+        return "Students{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", team='" + team + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
 
     public Students(int id, String firstName, String lastName, int age, String team, String city) {
         this.id = id;
@@ -13,16 +26,8 @@ public class Students {
         this.lastName = lastName;
         this.age = age;
         this.team = team;
+        this.city = city;
     }
-
-    public Students() {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.team = team;
-    }
-
 
     public int getId() {
         return id;
@@ -64,14 +69,13 @@ public class Students {
         this.team = team;
     }
 
-    @Override
-    public String toString() {
-        return "Students{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", team='" + team + '\'' +
-                '}';
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
+
+
