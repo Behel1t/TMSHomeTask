@@ -23,4 +23,7 @@ include 'lesson9'
 include 'lesson11'
 include 'lesson10'
 include 'lesson19'
+include 'lesson19:lesson20'
+findProject(':lesson19:lesson20')?.name = 'lesson20'
+include 'lesson20'
 
