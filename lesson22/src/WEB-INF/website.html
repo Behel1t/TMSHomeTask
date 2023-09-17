@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://kit.fontawesome.com/93ebb130d4.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">E-Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><i class="fa-solid fa-user"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                        <li><a class="dropdown-item" href="#">Авторизация</a></li>
+                    </ul>
+                </li>
+                        <li class="nav-item ">
+                        <a class="nav-link "  href="#" data-bs-toggle="modal" data-bs-target="#modal-cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                            <div class="modal fade" id="modal-cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-secondary text-white">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Корзина</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <table class="table">
+                                                <tbody>
+                                                <tr>
+                                                    <td><img src="https://avatars.mds.yandex.net/get-mpic/5346847/img_id2005598511852349727.jpeg/orig"></td>
+                                                    <td><a href="#">АК 74-У</a></td>
+                                                    <td>$ 300</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="https://i.ebayimg.com/images/g/rlwAAOSwx1ReHbxn/s-l1600.jpg"></td>
+                                                    <td><a href="#">Бронежилет</a></td>
+                                                    <td>$ 100</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link "  href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </li>
+                    </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid my-carousel">
+<div id="carouselExampleCaptions" class="carousel  slide carousel-fade" data-bs->
+    <div class="carousel-indicators" >
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://i.ytimg.com/vi/PZgMPoldQ2c/maxresdefault.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-content ">
+                <h5>Добро пожаловать на наш сайт</h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.warosu.org/data/biz/img/0233/57/1603059095345.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-content1 ">
+                <h5>Заинтересовал наш товар?</h5>
+                <p>Вы можете связаться с нами по телефону +7-546-224-422</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
+<section class="main-content">
+    <div class="container" >
+        <div class="row">
+            <div class="col-sm-6 mb-3">
+                <div class="product-card" >
+                    <div class="product-thumb">
+                        <a href="#"><img src="https://avatars.dzeninfra.ru/get-zen_doc/9860299/pub_64ceb44644f4277a13b492be_64ceb45f267b6a31f490c3fa/scale_1200"  class="card-img-top" alt=""></a>
+                    </div>
+                    <div class="product-details"></div>
+                    <h4><a href="#">СВД (СССР/Россия)</a></h4>
+                    <p>Тактико-технические характеристики:
+                        Калибр, мм 7,62
+                        Масса без патронов и прицела, кг 4,2
+                        Длина, мм 1220
+                        Высота с оптическим прицелом, мм 230
+                        Ширина с оптичеким прицелом, мм 88
+                        Длина ствола, мм 620
+                        Начальная скорость пули, м/с 830
+                        Скорострельность, в/м 30
+                        Дульная энергия, дж 4064
+                        Емкость магазина, патронов 10
+                        Прицельная дальность с открытым прицелом, м 1200
+                        Прицельная дальность с оптическим прицелом, м 1300
+                        Прицельная дальность с ночным прицелом, м 300</p>
+                            <div class=" product-bottom-details d-flex justify-content-between" >
+                                <div class="product-price">
+                                    <small>$1000</small> $499
+                                </div>
+                                <div class="product-links">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+                <div class="product-card" >
+                    <div class="product-thumb">
+                        <a href="#"><img src="https://avatars.dzeninfra.ru/get-zen_doc/10131288/pub_64ceb44644f4277a13b492be_64ceb45f65b8bf655f1c39a3/scale_1200" class="card-img-top" alt=""></a>
+                    </div>
+                    <div class="product-details"></div>
+                    <h4><a href="#">L96A1 (Великобритания)</a></h4>
+                    <p>Тактико-технические характеристики:
+                        Калибр: L96, Arctic Warfare, Police, Folding: 7.62x51mm NATO (.308 Win); Super Magnum: .338 Lapua (8.60x70mm), .300 Win Mag, 7mm Rem Mag
+                        механизм: ручное перезаряжание, продольно-скользящий затвор
+                        Длина: 1270 мм
+                        Длина cтвола: 660 мм
+                        Вес: 6.8kg без патронов и оптики
+                        Магазин: отъемный коробчатый, 5 патронов
+                        Макс. эфф. дальность: до 800 метров для вариантов под 7.62мм НАТО, до 1100+ метров для вариантов Super Magnum</p>
+                    <div class=" product-bottom-details d-flex justify-content-between" >
+                        <div class="product-price">
+                            <small>$5000</small> $2999
+                        </div>
+                        <div class="product-links">
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+                <div class="product-card" >
+                    <div class="product-thumb">
+                        <a href="#"><img src="https://avatars.dzeninfra.ru/get-zen_doc/10131288/pub_64ceb44644f4277a13b492be_64ceb45f2b27db0318b0b06f/scale_1200"  class="card-img-top" alt=""></a>
+                    </div>
+                    <div class="product-details"></div>
+                    <h4><a href="#">CheyTac Intervention (США)</a></h4>
+                    <p>Технические характеристики
+                        Калибр: 10,4×77 (.408 CheyTac)
+                        Длина оружия: 1346/1187 мм
+                        Длина ствола: 737 мм
+                        Масса без патронов: 14 кг.
+                        Емкость магазина: 7 патронов</p>
+                    <div class=" product-bottom-details d-flex justify-content-between" >
+                        <div class="product-price">
+                            <small>$15000</small> $9999
+                        </div>
+                        <div class="product-links">
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+</section>
+<footer>
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-md-6">
+                    <h4>Информация</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О магазине</a></li>
+                        <li><a href="#">Оплата и доставка</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-md-6">
+                    <h4>Время работы</h4>
+                    <ul class="list-unstyled">
+                        <li>г.Минск,ул.Пушкина,5</li>
+                        <li>пн-пт: 9:00-17:30</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-md-6">
+                    <h4>Контакты</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="tel:+7-546-224-422">+7-546-224-422</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-md-6">
+                    <h4>Мы в сети</h4>
+                   <div class="footer-icons">
+                       <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                       <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                       <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</html>
