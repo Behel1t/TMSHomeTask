@@ -1,0 +1,17 @@
+package org.example.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+@Configuration
+public class WebConfig {
+    @Bean
+    ViewResolver viewResolver(){
+        InternalResourceViewResolver viewResolver=new InternalResourceViewResolver();
+        viewResolver.setPrefix("/password/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
+    }
+}
